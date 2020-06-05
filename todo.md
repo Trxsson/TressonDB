@@ -25,3 +25,9 @@ Here the todo for me:
      + Database dumper
      + Database Login working
      + Database Version dumping
+
+#Errors
+|Code|Description       |
+|----|------------------|
+|001 | To many Arguments|
+|002 | Already exists!  |

@@ -52,6 +52,22 @@ public class NetworkSystem extends Logger {
                                 wr.println(pack);
                             }else if(readed.startsWith("[VERSION]")){
                                 wr.println("[VERSION] v1.0 TressonDB");
+                            }else if(readed.startsWith("[CREATE]")){
+                                String[] split = readed.split(" ");
+                                if(split.length == 2){
+                                    String name = split[1];
+                                    if(!(new File(Launcher.getDatebases_folder().getPath() + "/" + name + "/").exists())){
+                                        new File(Launcher.getDatebases_folder().getPath() + "/" + name + "/").mkdir();
+
+                                        log(Modes.info, "Created new DB: \"" + name + "\"!");
+
+                                        wr.println("[CREATED] " + name);
+                                    }else{
+                                        wr.println("[ERROR]002");
+                                    }
+                                }else{
+                                    wr.println("ERROR[001]");
+                                }
                             }
                         }
                     }else{
