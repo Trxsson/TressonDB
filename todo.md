@@ -22,7 +22,7 @@ Here the todo for me:
     #####v1.3
      + Database List --> Network
     #####v1.4
-     + Database dumper
+     + Database dumper lol
      + Database Login working
      + Database Version dumping
 
